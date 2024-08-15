@@ -1,7 +1,6 @@
 import {describe, it, expect} from "vitest"
 import {sameFrequency} from "./sameFrequency";
 
-
 describe("sameFrequency", () => {
     it('1- should returns true', () => {
         expect(sameFrequency(182, 281)).toBe(true)
