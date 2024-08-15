@@ -36,9 +36,6 @@ function sameFrequency(num1, num2) {
 
 console.log(sameFrequency(123,213));
 
-// let dest = [1,1,4]
-
-// console.log(1 * (10 ** dest.length))
 
 export {sameFrequency};
 
