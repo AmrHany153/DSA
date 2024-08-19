@@ -18,7 +18,7 @@ function areThereDuplicates(...args) {
     return false;
 }
 
-console.log(areThereDuplicates());
+console.log(areThereDuplicates('a', 'b', 'c', 'a'));
 
 export {areThereDuplicates}
 

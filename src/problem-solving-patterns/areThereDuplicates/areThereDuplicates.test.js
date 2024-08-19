@@ -4,7 +4,7 @@ import {areThereDuplicates} from "./areThereDuplicates.js"
 describe("areThereDuplicates", () => {
 
     it('1- should returns false', () => {
-        expect(areThereDuplicates([1, 2, 3])).toBe(false);
+        expect(areThereDuplicates(1, 2, 3)).toBe(false);
     });
 
     it('2- should returns true', () => {

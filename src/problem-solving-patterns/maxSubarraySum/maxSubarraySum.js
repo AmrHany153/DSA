@@ -14,7 +14,7 @@ function maxSubarraySum(arr, num) {
     if (arr.length < num) return null;
 
     let max = 0;
-    let temp = 0;
+    let temp;
 
     for (let i = 0; i < num; i++) {
         max += arr[i];
