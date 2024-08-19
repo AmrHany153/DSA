@@ -1,15 +1,11 @@
 {
   "name": "dsa",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "vitest"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "module": "index.ts",
   "type": "module",
-  "dependencies": {
-    "vitest": "^2.0.5"
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }
