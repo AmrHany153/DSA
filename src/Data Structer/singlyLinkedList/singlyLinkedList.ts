@@ -144,7 +144,7 @@ class SinglyLinkedList {
         return true;
         }
 
-        // add to front
+        // add to first
         if (index === 0) {
             this.unshift(val);
             return true;
@@ -160,7 +160,7 @@ class SinglyLinkedList {
         return true
     }
 
-    remove(index:number):Node | undefined {
+    remove(index:number):Node|undefined {
         // wrong index
         if (index < 0 || index >= this.length) return undefined;
 
@@ -226,6 +226,16 @@ class SinglyLinkedList {
             current = next;
         }
     }
+
+    print():void {
+        let list:any[] = [];
+        let current = this.head;
+        for (let i = 0; i < this.length; i++) {
+            list.push(current!.val)
+            current = current!.next!;
+        }
+        console.log(list);
+    }
 }
 
 let test = new SinglyLinkedList();
@@ -233,8 +243,10 @@ test.push(1);
 test.push(2);
 test.push(3);
 test.push(4);
+
+test.print();
 test.revers();
-console.log(test);
+test.print();
 
 
 
