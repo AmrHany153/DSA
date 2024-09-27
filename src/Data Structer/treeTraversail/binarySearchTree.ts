@@ -172,31 +172,51 @@ class BinarySearchTree {
         return visited;
     }
 
-    DFS():Queue {
-
-        // let queue:Queue = new Queue();
+    DFSPreOrder():Queue {
         let visited:Queue = new Queue();
-        visited.enqueue(this.root);
-
 
         function traverse(node:TNode|null):void {
             if(node === null) return;
-            
-            if (node.left) {
-                visited.enqueue(node.left)
-                traverse(node.left);
-            }
-
-            if (node.right) {
-                visited.enqueue(node.right)
-                traverse(node.right);
-            }
+            visited.enqueue(node);
+            if (node.left) { traverse(node.left) }
+            if (node.right) { traverse(node.right) }
         }
 
         traverse(this.root);
         return visited;
     }
+
+    DFSPostOrder():Queue {
+        let visited:Queue = new Queue();
+
+        function traverse(node:TNode|null):void {
+            if(node === null) return;
+            if (node.left) { traverse(node.left) }
+            if (node.right) { traverse(node.right) }
+            visited.enqueue(node);
+        }
+
+        traverse(this.root);
+        return visited;
+    }
+
+    DFSInOrder():Queue {
+        let visited:Queue = new Queue();
+
+        function traverse(node:TNode|null):void {
+            if(node === null) return;
+            if (node.left) { traverse(node.left) }
+            visited.enqueue(node);
+            if (node.right) { traverse(node.right) }
+        }
+
+        traverse(this.root);
+        return visited;
+    }
+
 }
+
+
 
 let test:any = new BinarySearchTree();
 test.insert(10);
@@ -206,4 +226,4 @@ test.insert(6);
 test.insert(3);
 test.insert(8);
 
-console.log(test.DFS().toArrayVal())
+console.log(test.DFSInOrder().toArrayVal())

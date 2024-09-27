@@ -6,3 +6,4 @@ let ar = {
 let beta = ar.find("EGP");
 
 let c = "EGP";
+
