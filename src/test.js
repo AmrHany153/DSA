@@ -1,9 +1,11 @@
-let ar = {
-    "EGP":45,
-    "USD":85,
-    "ERU":3
-};
-let beta = ar.find("EGP");
+let i1;
+let i2;
 
-let c = "EGP";
+function test (num, num2) {
+    return num, num2;
+}
+
+i1 , i2 = test(1,2);
+
+console.log(i1, i2);
 
